@@ -1,0 +1,47 @@
+1.  It gives null pointer exception.
+
+2.  An exception is an event that occurs during the execution of a program that disrupts the normal flow of     instructions during the execution of a program. The object an exception object, contains information about the     error, including its type and the state of the program when the error occurred.
+    An exception is an event that disrupts the normal flow of the program.It is an object which is thrown at runtime.
+    Java exception handling is managed via five keywords: try,catch,throw,throws,and finally.
+
+3.  we can create our own exceptions that are derived classes of the Exception class. Creating our own Exception is     known as custom exception or user-defined exception.
+    Custom exceptions provide you the flexibility to add attributes and methods.These help the application users or     the developers understand what the exact problem is. To catch and provide specific treatment to a subset of     existing Java exceptions. 
+
+4.  Encapsulation in Java is a process of wrapping code and data together into a single unit, We can create a fully     encapsulated class in Java by making all the data members of the class private.The private variables can be 
+    acessed by using get and set methods.
+    Rules of encapsulation
+       * class members shuold be private.
+       * class can't be finalize.
+       * class members should be acessed by using set and get methods.
+       * Atleast one constructor.
+
+5.  Polymorphism in Java is the ability of an object to take many forms. To simply put, polymorphism in java allows     us to perform the same action in many different ways.
+    Types of polymorphisms
+        * Compiletime polymorphism.
+        * Runtime polymorphism.
+
+6.  To define more than one method with the same name in a class is known as method overloading.
+    example: Online shoping it pay amount. payment is the method to pay that amount in number of ways.
+
+7.  A sub class provides specific implementation of the method that is already presents in main class is known as 
+    method overriding.
+    example:
+
+8.  Error will comes.
+
+9.  Error will comes. without main method program does not executed.
+
+10. Institute provide training
+    X-works provides java Enterprice application training
+
+11. The process of reducing the object to its essence so that only the necessary characteristics are exposed to the     users.
+     2 ways to achieve abstraction 
+         1.abstract class
+         2.interfaces
+     By using interfaces to achieve 100% abstraction.
+
+12. two ways to intialize value
+      1.data type variable name=value;
+      2.data type variable name; 
+
+
