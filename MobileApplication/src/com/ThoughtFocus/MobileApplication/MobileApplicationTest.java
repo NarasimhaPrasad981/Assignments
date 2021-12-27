@@ -29,7 +29,7 @@ public class MobileApplicationTest {
 
 		dao.getAll();
 
-		dao.getAllByBrandName("Iphone");
+		dao.getAllByBrandName("OPPO f11");
 
 	}
 }
