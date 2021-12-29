@@ -21,7 +21,6 @@ public class MobileDAO implements Mobile {
 
 	@Override
 	public void getAll() {
-		System.out.println("--------All device list--------");
 		for(MobileDTO detail : dtos) {
 			System.out.println(detail);
 		}
