@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--  -->
+    <div class="fluid-container">
+        <div class="container p-2">
+            <div class="d-flex justify-content-space-evenly align-items-center">
+                <a href="https://thoughtfocus.com/" target="_blank">
+                    <img class="logo" src="https://res.cloudinary.com/dip47kyqa/image/upload/v1641774012/logo_yo3nbu.jpg" alt="logo" width="50" height="50" />
+                </a>
+                <h3 class="text-center w-100">Thoughtfocus</h3>
+                <div class="d-flex flex-column">
+                    <a href="https://www.twitter.com/" target="_blank" class="text-decoration-none">Twitter</a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="text-decoration-none">Linkedin</a>
+                </div>
+            </div>
+
+            <div class="header-container">
+                <div>
+                    <a onClick="display('sectionHome')" target="_blank" class="navigation-text text-decoration-none">Home</a>
+                    <a onClick="display('sectionAdd')" target="_blank" class="navigation-text text-decoration-none">Add</a>
+                    <a onClick="display('sectionNew')" target="_blank" class="navigation-text text-decoration-none">New</a>
+                    <a onClick="display('sectionView')" target="_blank" class="navigation-text text-decoration-none">View</a>
+                    <a onClick="display('sectionRemove')" class="navigation-text text-decoration-none">Remove</a>
+                    <a onClick="display('sectionSearch')" target="_blank" class="navigation-text text-decoration-none">Search</a>
+                </div>
+                <h3 id="header-date"></h3>
+            </div>
+
+            <div class="text-center input-containers d-flex flex-column align-items-center m-4 flex-grow-1">
+
+                <div id="sectionLogin">
+                    <form id="login">
+                        <div class="d-flex mb-1">
+                            <label class="input-label mr-auto">User Name</label>
+                            <div class="d-flex flex-column">
+                                <input id="login-user-name" />
+                                <span id="login-user-name-error" class="error d-none">*Invalid User Name</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <label class="input-label mr-auto">Password</label>
+                            <div class="d-flex flex-column">
+                                <input id="login-password" />
+                                <span id="login-password-error" class="error d-none">*Invalid Password</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit">Login</button>
+                        </div>
+
+                        <a class="new-user" onclick="display('sectionAddNew')">New User ?</a>
+                    </form>
+                </div>
+
+
+                <div id="sectionHome">
+                    <div class="home-container">
+                        <h1>Welcome to Simple Employee Record System</h1>
+                    </div>
+                </div>
+
+
+                <div id="sectionAdd">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex mb-1">
+                            <label class="label mr-auto">Eid</label>
+                            <div class="d-flex flex-column">
+                                <input id="eid" class="input" />
+                                <span id="eid-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="label mr-auto">Name</label>
+                            <div class="d-flex flex-column">
+                                <input id="name" class="input" />
+                                <span id="name-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="label mr-auto">Salary</label>
+                            <div class="d-flex flex-column">
+                                <input id="salary" class="input" />
+                                <span id="salary-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="label mr-auto">Dept</label>
+                            <select id="department" class="input flex-grow-1">
+                                <option>IT</option>
+                                <option>HR</option>
+                                <option>Admin</option>
+                            </select>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <label class="label mr-auto">Skill</label>
+                            <select id="skill" class="input flex-grow-1">
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>Javascript</option>
+                            </select>
+                        </div>
+                        <div class="button-container">
+                            <button id="add-btn" class="btn btn-outline button add">Add</button>
+                            <button id="clear-btn" class="btn btn-outline button text-primary">Clear</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="sectionNew">
+                    <h3>New HR Register Form</h3>
+                    <form id="form">
+                        <div class="d-flex mb-1">
+                            <label class="input-label mr-auto">First Name</label>
+                            <div class="d-flex flex-column">
+                                <input id="first-name" />
+                                <span id="first-name-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="input-label mr-auto">Last Name</label>
+                            <div class="d-flex flex-column">
+                                <input id="last-name" />
+                                <span id="last-name-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="input-label mr-auto">User Name</label>
+                            <div class="d-flex flex-column">
+                                <input id="user-name" />
+                                <span id="user-name-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="input-label mr-auto">Password</label>
+                            <div class="d-flex flex-column">
+                                <input id="password" />
+                                <span id="password-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="input-label mr-auto">Address</label>
+                            <div class="d-flex flex-column">
+                                <input id="address" />
+                                <span id="address-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-1">
+                            <label class="input-label mr-auto">Contact No</label>
+                            <div class="d-flex flex-column">
+                                <input id="contact-no" />
+                                <span id="contact-no-error" class="error d-none">*required</span>
+                            </div>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+
+                <div id="sectionView">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sl No</th>
+                                <th>Eid</td>
+                                <th>Name</th>
+                                <th>Salary</th>
+                                <th>Dept</th>
+                                <th>Skill</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-space-between m-3">
+                        <p class="paragraph">Total No of Employees: <span id="totalEmployees"></span></p>
+                        <p class="paragraph netSalary">Net Salary: <span id="netSalary"></span></p>
+                    </div>
+                </div>
+
+
+                <div id="sectionRemove">
+                    <div class="d-flex mb-1">
+                        <label class="input-label">Enter EmpId: </label>
+                        <div class="d-flex flex-column">
+                            <input id="remove-employee-id" />
+                            <span id="remove-employee-id-error" class="error d-none">*Required</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" id="remove-btn">Remove</button>
+                    </div>
+                </div>
+
+
+                <div id="sectionSearch">
+                    <div class="d-flex mb-1">
+                        <label class="input-label">Enter EmpId: </label>
+                        <div class="d-flex flex-column">
+                            <input id="search-employee-id" />
+                            <span id="search-employee-id-error" class="error d-none">*Required</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" id="search-employee-btn">Search</button>
+                    </div>
+
+                    <table id="search-employee-table" class="mt-5 d-none">
+                        <thead>
+                            <tr>
+                                <th>Eid</td>
+                                <th>Name</th>
+                                <th>Salary</th>
+                                <th>Dept</th>
+                                <th>Skill</th>
+                            </tr>
+                        </thead>
+                        <tbody id="search-employee-table-body">
+                        </tbody>
+                    </table>
+                    <h1 id="search-not-found" class="mt-5 d-none text-danger">Not Found</h1>
+                </div>
+
+            </div>
+
+            <h5 class="text-primary text-center">All rights c <span id="date"></span></h5>
+        </div>
+
+        <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+        <script type="text/javascript" src="employeeApp.js"></script>
+
+</body>
+
+</html>

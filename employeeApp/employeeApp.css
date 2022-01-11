@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.container {
+    height: 99vh;
+    min-width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: space-between; */
+    flex-grow: 1;
+    align-self: stretch;
+}
+
+.logo {
+    height: 40px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 2;
+    align-self: stretch;
+    height: 60vh;
+}
+
+.navigation-text {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 20px;
+    /* text-decoration: none; */
+}
+
+.input-container {
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 24px;
+    /* border: 2px solid blue; */
+    margin: 0px;
+    width: 60px;
+    text-align: left;
+}
+
+.input {
+    margin: 0px;
+    margin-left: 20px;
+    border: 4px solid black
+}
+
+.error {
+    align-self: flex-start;
+    margin-left: 20px;
+    color: red;
+}
+
+.button {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.button:focus {
+    box-shadow: none;
+}
+
+.add {
+    color: red;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.paragraph {
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+}
+
+.input-label {
+    font-weight: bold;
+    font-family: serif;
+    font-size: 18px;
+}
+
+.error {
+    margin-left: 0px;
+    color: red;
+}
+
+.new-user {
+    text-decoration: underline;
+}
+table, td, th,tbody {
+    border: 1px solid black;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+td, tbody {
+    text-align: center;
+    margin-left: 30px;
+  }
+  th {
+    text-align: left;
+  }
+  .netSalary {
+      margin-left: 100px;
+  }
